@@ -1,0 +1,6 @@
+{
+  "name": "Passport Portal — Passport Automation System",
+  "description": "Full-stack desktop-first Passport Automation System prototype for R25 Software Engineering, featuring applicant filings, document verification, biometric appointments, and officer scrutiny console.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
