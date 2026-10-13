@@ -142,6 +142,14 @@ export const NewApplicationPage: React.FC<NewApplicationPageProps> = ({
       {/* Top Header Band with Status Pills */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
         <div className="space-y-1">
+          {/* Back Button */}
+          <button
+            onClick={() => onNavigate('dashboard')}
+            className="flex items-center gap-1.5 text-[#756B63] hover:text-[#6F4E37] text-xs font-medium mb-2 transition-colors group"
+          >
+            <span className="material-symbols-outlined text-[18px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
+            Back to Dashboard
+          </button>
           <div className="flex items-center gap-2 mb-1">
             <span className="px-2 py-0.5 rounded bg-[#F2E6DF] text-[#50453E] text-[11px] font-semibold uppercase tracking-wider border border-[#E7DED6]">
               Official Form P-1
