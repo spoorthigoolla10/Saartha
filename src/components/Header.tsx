@@ -90,7 +90,11 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
             <button
               onClick={() => onNavigate('application-tracking')}
-              className="h-16 flex items-center text-[#50453E] hover:text-[#201A17] transition-colors text-[13px] font-medium"
+              className={`h-16 flex items-center transition-colors text-[13px] ${
+                activePath === 'application-tracking'
+                  ? 'text-[#6F4E37] font-semibold border-b-2 border-[#6F4E37]'
+                  : 'text-[#50453E] hover:text-[#201A17] font-medium'
+              }`}
             >
               Track Application
             </button>

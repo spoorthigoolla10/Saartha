@@ -89,6 +89,7 @@ export default function App() {
 
   const unreadCount = notifications.filter(n => !n.is_read).length;
   const isLanding = activePath === 'home';
+  const isPublicLayout = activePath === 'home' || activePath === 'application-tracking';
 
   return (
     <div className="min-h-screen bg-[#F8F5F2] text-[#201A17] font-sans">
@@ -101,7 +102,7 @@ export default function App() {
         onOpenNotifications={() => setNotifModalOpen(true)}
         unreadCount={unreadCount}
         onSwitchUser={handleRoleSwitch}
-        isLanding={isLanding}
+        isLanding={isPublicLayout}
       />
 
       {/* Landing Page (No Sidebar Layout) */}
@@ -110,6 +111,13 @@ export default function App() {
           <LandingPage
             onNavigate={handleNavigation}
             onOpenAuth={() => setAuthModalOpen(true)}
+          />
+        </main>
+      ) : activePath === 'application-tracking' ? (
+        <main className="w-full pt-20 px-8 max-w-[1440px] mx-auto">
+          <ApplicationTrackingPage
+            currentUser={currentUser}
+            initialApplication={trackingSelectedApp}
           />
         </main>
       ) : (
